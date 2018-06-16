@@ -50,6 +50,7 @@ module.exports = {
 
   devServer: {
     inline: true,
+    port: 3030,
     stats: { colors: true },
   },
 };

@@ -25,8 +25,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "koa": "^2.5.1",
-    "koa-helmet": "^4.0.0",
-    "koa-router": "^7.4.0"
+    "express": "^4.16.3",
+    "helmet": "^3.12.1"
   }
 }
