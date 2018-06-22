@@ -15,6 +15,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-emotion": "^9.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
@@ -31,6 +32,7 @@
     "express": "^4.16.3",
     "helmet": "^3.12.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
   }
 }

@@ -4,13 +4,15 @@
     "development": {
       "plugins": [
         ["emotion", { "sourceMap": true, "autoLabel": true }],
-        ["transform-class-properties", { "spec": true }]
+        ["transform-class-properties", { "spec": true }],
+        ["transform-object-rest-spread", { "useBuiltIns": true }]
       ]
     },
     "production": {
       "plugins": [
         ["emotion", { "hoist": true }],
-        ["transform-class-properties", { "spec": true }]
+        ["transform-class-properties", { "spec": true }],
+        ["transform-object-rest-spread", { "useBuiltIns": true }]
       ]
     }
   }
