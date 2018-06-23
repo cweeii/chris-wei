@@ -1,11 +1,14 @@
 import { css, keyframes } from 'emotion';
 
-const slideUp = keyframes`
+const arrowMovement = keyframes`
   0% {
-    translateY(-2rem);
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(2rem, 0, 0);
   }
   100% {
-    translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 `;
 
@@ -13,12 +16,13 @@ export const hiLink = css`
   font-size: 3rem;
   font-weight: bold;
   padding: 1rem 2rem;
-  opacity: 0;
-  transform: translateY(2rem);
-  transition: all 1.5s ease-in-out;
+  position: absolute;
+`;
 
-  &.mounted {
-    transform: translateY(0);
-    opacity: 1;
+export const hiSpan = css`
+  & svg {
+    animation: ${arrowMovement} 1s infinite;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
   }
 `;
