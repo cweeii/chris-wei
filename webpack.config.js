@@ -47,4 +47,6 @@ module.exports = {
     port: 3030,
     stats: { colors: true },
   },
+
+  devtool: 'source-map',
 };
