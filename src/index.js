@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'emotion';
 
-import App from './App';
+import Router from './router/Router';
 
 injectGlobal`
   * {
@@ -15,4 +15,4 @@ injectGlobal`
   }
 `;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));
