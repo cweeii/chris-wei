@@ -6,12 +6,6 @@ import withMountAnimation from '../../hocs/mount-animation/withMountAnimation';
 
 import { hiLink } from './HiThere-emotion';
 
-const onClick = e => {
-  e.preventDefault();
-
-  console.log('lolwut');
-};
-
 const HiThere = ({ mounted }) => (
   <Link
     className={mounted ? cx(hiLink, 'mounted') : hiLink}
