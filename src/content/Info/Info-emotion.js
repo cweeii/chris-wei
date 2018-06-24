@@ -48,8 +48,12 @@ const linkAnimation = time => css`
     transition: fill 300ms ease-in-out;
   }
 
-  &:hover svg path {
-    fill: black;
+  &:active,
+  &:focus,
+  &:hover {
+    svg path {
+      fill: black;
+    }
   }
 
   &:not(:last-child) {

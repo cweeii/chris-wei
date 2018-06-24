@@ -74,6 +74,8 @@ export const hiLink = css`
   position: absolute;
   transition: color 300ms ease-in-out;
 
+  &:active,
+  &:focus,
   &:hover {
     color: black;
 
