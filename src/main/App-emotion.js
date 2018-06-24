@@ -2,7 +2,7 @@ import { css, keyframes } from 'emotion';
 
 const appearAnimation = keyframes`
   0% {
-    opacity: 0.01;
+    opacity: 0;
     transform: translate3d(0, 4rem,0 );
   }
   100% {
@@ -17,7 +17,7 @@ const exitAnimation = keyframes`
     transform: translate3d(0, 0, 0);
   }
   100% {
-    opacity: 0.01;
+    opacity: 0;
     transform: translate3d(0, -4rem, 0);
   }
 `;
