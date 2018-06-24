@@ -9,16 +9,8 @@ const app = express();
 app.use(helmet());
 app.use(express.static('dist'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
-});
-
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/dist/index.html'), err => {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
 app.listen(PORT, () => {
