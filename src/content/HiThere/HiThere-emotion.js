@@ -1,17 +1,4 @@
 import { css, keyframes } from 'emotion';
-import { RSA_PKCS1_PSS_PADDING } from 'constants';
-
-const arrowMovement = keyframes`
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(2rem, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-`;
 
 const triangleEffectTopLeft = keyframes`
   0% {
@@ -85,48 +72,65 @@ export const hiLink = css`
   font-weight: bold;
   padding: 1rem 2rem;
   position: absolute;
+  transition: color 300ms ease-in-out;
 
-  &:before {
-    animation: ${triangleEffectTopLeft} infinite 1s;
+  &:hover {
+    color: black;
+
+    &::before {
+      border-top: 1rem solid black;
+    }
+
+    &::after {
+      border-top: 1rem solid black;
+    }
+
+    & span::before {
+      border-bottom: 1rem solid black;
+    }
+
+    & span::after {
+      border-bottom: 1rem solid black;
+    }
+  }
+
+  &::before {
+    animation: ${triangleEffectTopLeft} 1000ms infinite 1000ms;
     ${triangleDefaults};
     border-right: 1rem solid transparent;
     border-top: 1rem solid white;
     left: 0;
     top: 0;
+    transition: border-top 300ms ease-in-out;
   }
 
-  &:after {
-    animation: ${triangleEffectTopRight} infinite 1s;
+  &::after {
+    animation: ${triangleEffectTopRight} 1000ms infinite 1000ms;
     ${triangleDefaults};
     border-left: 1rem solid transparent;
     border-top: 1rem solid white;
     right: 0;
     top: 0;
+    transition: border-top 300ms ease-in-out;
   }
 
-  span:before {
-    animation: ${triangleEffectBottomLeft} infinite 1s;
+  span::before {
+    animation: ${triangleEffectBottomLeft} 1000ms infinite 1000ms;
     ${triangleDefaults};
     border-bottom: 1rem solid white;
     border-right: 1rem solid transparent;
     bottom: 0;
     left: 0;
+    transition: border-bottom 300ms ease-in-out;
   }
 
-  span:after {
-    animation: ${triangleEffectBottomRight} infinite 1s;
+  span::after {
+    animation: ${triangleEffectBottomRight} 1000ms infinite 1000ms;
     ${triangleDefaults};
     border-bottom: 1rem solid white;
     border-left: 1rem solid transparent;
     bottom: 0;
     right: 0;
-  }
-`;
-
-export const hiSpan = css`
-  & svg {
-    animation: ${arrowMovement} 1s infinite;
-    margin-left: 1rem;
-    margin-bottom: 0.3rem;
+    transition: border-bottom 300ms ease-in-out;
   }
 `;
