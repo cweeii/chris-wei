@@ -2,11 +2,11 @@ import * as React from 'react';
 
 import Link from '../../components/link/Link';
 
-import { hiLink, hiSpan } from './HiThere-emotion';
+import { hiLink } from './HiThere-emotion';
 
 const HiThere = () => (
   <Link className={hiLink} isRouterLink to="/hello">
-    <span className={hiSpan}>Hi there!</span>
+    <span>Hi there!</span>
   </Link>
 );
 

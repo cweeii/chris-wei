@@ -2,60 +2,60 @@ import { css, keyframes } from 'emotion';
 
 const triangleEffectTopLeft = keyframes`
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
   50% {
-    opacity: 0;
-    transform: translate3d(-2rem, -2rem, 0);
+    opacity: 1;
+    transform: translate3d(-1rem, -1rem, 0);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 `;
 
 const triangleEffectTopRight = keyframes`
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
   50% {
-    opacity: 0;
-    transform: translate3d(2rem, -2rem, 0);
+    opacity: 1;
+    transform: translate3d(1rem, -1rem, 0);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 `;
 
 const triangleEffectBottomLeft = keyframes`
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
   50% {
-    opacity: 0;
-    transform: translate3d(-2rem, 2rem, 0);
+    opacity: 1;
+    transform: translate3d(-1rem, 1rem, 0);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 `;
 
 const triangleEffectBottomRight = keyframes`
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
   50% {
-    opacity: 0;
-    transform: translate3d(2rem, 2rem, 0);
+    opacity: 1;
+    transform: translate3d(1rem, 1rem, 0);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 `;
@@ -100,6 +100,7 @@ export const hiLink = css`
     border-right: 1rem solid transparent;
     border-top: 1rem solid white;
     left: 0;
+    opacity: 0;
     top: 0;
     transition: border-top 300ms ease-in-out;
   }
@@ -109,6 +110,7 @@ export const hiLink = css`
     ${triangleDefaults};
     border-left: 1rem solid transparent;
     border-top: 1rem solid white;
+    opacity: 0;
     right: 0;
     top: 0;
     transition: border-top 300ms ease-in-out;
@@ -121,6 +123,7 @@ export const hiLink = css`
     border-right: 1rem solid transparent;
     bottom: 0;
     left: 0;
+    opacity: 0;
     transition: border-bottom 300ms ease-in-out;
   }
 
@@ -130,6 +133,7 @@ export const hiLink = css`
     border-bottom: 1rem solid white;
     border-left: 1rem solid transparent;
     bottom: 0;
+    opacity: 0;
     right: 0;
     transition: border-bottom 300ms ease-in-out;
   }
