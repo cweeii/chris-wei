@@ -4,10 +4,12 @@ const appearAnimation = keyframes`
   0% {
     opacity: 0;
     transform: translate3d(0, 4rem,0 );
+    z-index: 1;
   }
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    z-index: 1;  
   }
 `;
 
@@ -15,10 +17,12 @@ const exitAnimation = keyframes`
   0% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    z-index: 0;
   }
   100% {
     opacity: 0;
     transform: translate3d(0, -4rem, 0);
+    z-index: 0;
   }
 `;
 
@@ -30,8 +34,8 @@ export const layout = css`
   align-items: center;
   background: linear-gradient(
     to bottom right,
-    rgb(95, 75, 139, 1),
-    rgb(95, 75, 139, 0.5)
+    rgba(95, 75, 139, 1),
+    rgba(95, 75, 139, 0.5)
   );
   display: flex;
   justify-content: center;
@@ -50,7 +54,7 @@ export const appearActive = css`
 
 export const enter = css`
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translate3d(0, 4rem, 0;
 `;
 
 export const enterActive = css`

@@ -43,7 +43,7 @@ const linkAnimation = time => css`
   animation: ${linkFlyIn} 300ms ease-in-out ${time} both;
   opacity: 0;
 
-  & svg path {
+  & path {
     fill: white;
     transition: fill 300ms ease-in-out;
   }
