@@ -39,8 +39,8 @@ const linkFlyIn = keyframes`
   }
 `;
 
-const linkAnimation = time => css`
-  animation: ${linkFlyIn} 300ms ease-in-out ${time} both;
+const linkAnimation = delay => css`
+  animation: ${linkFlyIn} 300ms ease-in-out ${delay} both;
   opacity: 0;
 
   & path {
