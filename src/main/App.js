@@ -15,47 +15,27 @@ import {
   exitActive,
 } from './App-emotion';
 
-class App extends React.Component {
-  arrowTimeout;
-
-  state = {
-    arrow: false,
-  };
-
-  componentDidMount() {
-    this.arrowTimeout = setTimeout(() => {
-      this.setState({ arrow: true });
-    }, 3000);
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.arrowTimeout);
-  }
-
-  render() {
-    return (
-      <TransitionGroup className={layout}>
-        <CSSTransition
-          appear
-          key={this.props.location.key}
-          classNames={{
-            appear,
-            appearActive,
-            enter,
-            enterActive,
-            exit,
-            exitActive,
-          }}
-          timeout={2000}
-        >
-          <Switch location={this.props.location}>
-            <Route exact path="/" component={HiThere} />
-            <Route path="/hello" component={Info} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-    );
-  }
-}
+const App = ({ location }) => (
+  <TransitionGroup className={layout}>
+    <CSSTransition
+      appear
+      key={location.key}
+      classNames={{
+        appear,
+        appearActive,
+        enter,
+        enterActive,
+        exit,
+        exitActive,
+      }}
+      timeout={2000}
+    >
+      <Switch location={location}>
+        <Route exact path="/" component={HiThere} />
+        <Route path="/hello" component={Info} />
+      </Switch>
+    </CSSTransition>
+  </TransitionGroup>
+);
 
 export default withRouter(App);
