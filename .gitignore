@@ -64,7 +64,8 @@ elm-stuff
 repl-temp-*
 
 # output directory
-dist
+dist/index.html
+dist/js
 
 # mac stuff
 .DS_Store

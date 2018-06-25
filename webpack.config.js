@@ -46,6 +46,7 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     port: 3030,
+    publicPath: '/dist/',
     stats: { colors: true },
   },
 
