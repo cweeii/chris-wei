@@ -59,7 +59,7 @@ const Info = () => {
         </Link>
         <Link
           className={resumeLink}
-          href={`https://storage.googleapis.com/chris-wei-207401.appspot.com/Chris%20Wei%20Resume%CC%81.pdf?time=${time}`}
+          href={`https://storage.googleapis.com/chris-wei-207401.appspot.com/Chris%20Wei%20R%C3%A9sum%C3%A9.pdf?time=${time}`}
           target="_blank"
         >
           <Resume />
