@@ -26,8 +26,9 @@ const exitAnimation = keyframes`
   }
 `;
 
-const cubicBezier = animation => css`
-  animation: ${animation} 1000ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
+const cubicBezier = (animation, delay = '0ms') => css`
+  animation: ${animation} 1000ms cubic-bezier(0.39, 0.575, 0.565, 1) ${delay}
+    both;
 `;
 
 export const layout = css`
@@ -44,12 +45,12 @@ export const layout = css`
 `;
 
 export const appear = css`
-  opacity: 0.01;
+  opacity: 0;
   transform: translate3d(0, 4rem, 0);
 `;
 
 export const appearActive = css`
-  ${cubicBezier(appearAnimation)};
+  ${cubicBezier(appearAnimation, '300ms')};
 `;
 
 export const enter = css`
