@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "deploy": "yarn build && gcloud app deploy",
+    "deploy": "yarn build && gcloud config configurations activate default && gcloud app deploy",
     "dev": "webpack-dev-server --mode development --open --hot",
     "start": "node server.js"
   },
