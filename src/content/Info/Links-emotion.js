@@ -26,6 +26,11 @@ const linkAnimation = delay => css`
     transition: fill 300ms ease-in-out;
   }
 
+  & .info-icon {
+    height: 30px;
+    transition: all 300ms linear;
+  }
+
   &:active,
   &:focus,
   &:hover {
@@ -40,6 +45,20 @@ const linkAnimation = delay => css`
 
   &:last-child {
     margin-left: 1rem;
+  }
+
+  @media (max-width: 43.75rem) {
+    &:not(:last-child) {
+      margin: 0 0.5rem;
+    }
+
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+
+    .info-icon {
+      height: 20px;
+    }
   }
 `;
 

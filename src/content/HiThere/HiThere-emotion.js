@@ -74,6 +74,10 @@ export const hiLink = css`
   position: absolute;
   transition: color 300ms ease-in-out;
 
+  @media (max-width: 43.75rem) {
+    font-size: 2.5rem;
+  }
+
   &:active,
   &:focus,
   &:hover {

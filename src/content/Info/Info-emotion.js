@@ -14,10 +14,15 @@ export const name = css`
   transition: font-size 300ms linear;
 
   @media (max-width: 43.75rem) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
 export const description = css`
   align-self: flex-end;
+  transition: font-size 300ms linear;
+
+  @media (max-width: 43.75rem) {
+    font-size: 0.8rem;
+  }
 `;
