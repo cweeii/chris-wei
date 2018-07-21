@@ -28,7 +28,7 @@ const linkAnimation = delay => css`
 
   & .info-icon {
     height: 30px;
-    transition: all 300ms linear;
+    transition: height 300ms linear;
   }
 
   &:active,

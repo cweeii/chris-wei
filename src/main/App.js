@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Info from '../content/Info/Info';
 import HiThere from '../content/HiThere/HiThere';
+import Canvas from '../content/Info/Canvas';
 
 import {
   layout,
@@ -17,6 +18,7 @@ import {
 
 const App = ({ location }) => (
   <TransitionGroup className={layout}>
+    <Canvas />
     <CSSTransition
       appear
       key={location.key}
@@ -32,7 +34,7 @@ const App = ({ location }) => (
     >
       <Switch location={location}>
         <Route exact path="/" component={HiThere} />
-        <Route path="/hello" component={Info} />
+        <Route path="/hello" render={Info} />
       </Switch>
     </CSSTransition>
   </TransitionGroup>

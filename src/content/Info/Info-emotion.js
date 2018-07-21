@@ -1,4 +1,4 @@
-import { css, keyframes } from 'emotion';
+import { css } from 'emotion';
 
 export const container = css`
   align-items: center;
@@ -6,6 +6,7 @@ export const container = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 `;
 
 export const name = css`
